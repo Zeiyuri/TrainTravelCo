@@ -9,6 +9,9 @@ namespace TrainTravelCoNew.Models
     {
         public Customer RegisteredCustomer { get; set; }
         public Trip RegisteredTrip { get; set; }
-        
+        public Booking(Customer customer)
+        {
+            RegisteredCustomer = customer;
+        }
     }
 }

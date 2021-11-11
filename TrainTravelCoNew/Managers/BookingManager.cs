@@ -58,12 +58,12 @@ namespace TrainTravelCoNew.Managers
                 {
                     if(item.AllBookings.Count < item.TrainToDestination.MaxCapacity)
                     {
-                        var newBooking = new Booking()
+                        var newBooking = new Booking(customer)
                         {
-                            RegisteredCustomer = customer,
                             RegisteredTrip = item
                         };
                         item.AllBookings.Add(newBooking);
+                        DataStorage.Instance.CreateTrip(item);
                         return "Booking Successful";
                     }
                     else

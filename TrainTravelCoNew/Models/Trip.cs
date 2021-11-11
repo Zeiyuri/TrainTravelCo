@@ -7,6 +7,7 @@ namespace TrainTravelCoNew.Models
 {
     public class Trip
     {
+
         public string Origin { get; set; }
         public string Destination { get; set; }
         public string DepartureTime { get; set; }
@@ -21,5 +22,14 @@ namespace TrainTravelCoNew.Models
             Id = _idCount;
             _idCount += 1;
         }
+        public Trip(int id)
+        {
+            AllBookings = new List<Booking>();
+            Id = id;
+            
+        }
+
     }
 }
+
+

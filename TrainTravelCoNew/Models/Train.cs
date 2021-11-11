@@ -16,5 +16,13 @@ namespace TrainTravelCoNew.Models
             Id = _idCount;
             _idCount += 1;
         }
+        public Train(int id)
+        {
+            Id = id;
+        }
+        public void SetIdCountAtStartup(int id)
+        {
+            _idCount = id;
+        }
     }
 }
